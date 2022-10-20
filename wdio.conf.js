@@ -115,6 +115,11 @@ exports.config = {
     //
     // Default request retries count
     connectionRetryCount: 3,
+    // Add configuration of wdi5.
+    wdi5: {
+        skipInjectUI5OnStart: true,
+        url: "/nsHTML5Module/index.html", // [mandatory] {string} name of your bootstrap html file. If your server autoredirects to a 'domain:port/'-like root url, use empty string ''
+    },
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
