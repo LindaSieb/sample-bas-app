@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "App Title",
-									"targetURL": "#project1-display"
+									"targetURL": "#ui5-wdio-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"project1-display": {
-								"semanticObject": "project1",
+							"ui5-wdio-display": {
+								"semanticObject": "ui5-wdio",
 								"action": "display",
 								"description": "A Fiori application.",
 								"title": "App Title",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=project1",
-									"url": sap.ui.require.toUrl("project1")
+									"additionalInformation": "SAPUI5.Component=ui5-wdio",
+									"url": sap.ui.require.toUrl("ui5-wdio")
 								}
 							}
 						}

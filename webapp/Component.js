@@ -5,12 +5,12 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "project1/model/models"
+        "ui5-wdio/model/models"
     ],
     function (UIComponent, Device, models) {
         "use strict";
 
-        return UIComponent.extend("project1.Component", {
+        return UIComponent.extend("ui5-wdio.Component", {
             metadata: {
                 manifest: "json"
             },

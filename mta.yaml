@@ -1,53 +1,53 @@
 _schema-version: "3.2"
-ID: project1
+ID: ui5-wdio
 description: A Fiori application.
 version: 0.0.1
 modules:
-- name: project1-destination-content
+- name: ui5-wdio-destination-content
   type: com.sap.application.content
   requires:
-  - name: project1-destination-service
+  - name: ui5-wdio-destination-service
     parameters:
       content-target: true
-  - name: project1-repo-host
+  - name: ui5-wdio-repo-host
     parameters:
       service-key:
-        name: project1-repo-host-key
-  - name: project1-uaa
+        name: ui5-wdio-repo-host-key
+  - name: ui5-wdio-uaa
     parameters:
       service-key:
-        name: project1-uaa-key
+        name: ui5-wdio-uaa-key
   parameters:
     content:
       instance:
         destinations:
-        - Name: project1_html_repo_host
-          ServiceInstanceName: project1-html5-srv
-          ServiceKeyName: project1-repo-host-key
-          sap.cloud.service: project1
+        - Name: ui5-wdio_html_repo_host
+          ServiceInstanceName: ui5-wdio-html5-srv
+          ServiceKeyName: ui5-wdio-repo-host-key
+          sap.cloud.service: ui5-wdio
         - Authentication: OAuth2UserTokenExchange
-          Name: project1_uaa
-          ServiceInstanceName: project1-xsuaa-srv
-          ServiceKeyName: project1-uaa-key
-          sap.cloud.service: project1
+          Name: ui5-wdio_uaa
+          ServiceInstanceName: ui5-wdio-xsuaa-srv
+          ServiceKeyName: ui5-wdio-uaa-key
+          sap.cloud.service: ui5-wdio
         existing_destinations_policy: ignore
   build-parameters:
     no-source: true
-- name: project1-app-content
+- name: ui5-wdio-app-content
   type: com.sap.application.content
   path: .
   requires:
-  - name: project1-repo-host
+  - name: ui5-wdio-repo-host
     parameters:
       content-target: true
   build-parameters:
     build-result: resources
     requires:
     - artifacts:
-      - project1.zip
-      name: project1
+      - ui5-wdio.zip
+      name: ui5-wdio
       target-path: resources/
-- name: project1
+- name: ui5-wdio
   type: html5
   path: .
   build-parameters:
@@ -58,7 +58,7 @@ modules:
     - npm run build:cf
     supported-platforms: []
 resources:
-- name: project1-destination-service
+- name: ui5-wdio-destination-service
   type: org.cloudfoundry.managed-service
   parameters:
     config:
@@ -74,20 +74,20 @@ resources:
           existing_destinations_policy: update
       version: 1.0.0
     service: destination
-    service-name: project1-destination-service
+    service-name: ui5-wdio-destination-service
     service-plan: lite
-- name: project1-uaa
+- name: ui5-wdio-uaa
   type: org.cloudfoundry.managed-service
   parameters:
     path: ./xs-security.json
     service: xsuaa
-    service-name: project1-xsuaa-srv
+    service-name: ui5-wdio-xsuaa-srv
     service-plan: application
-- name: project1-repo-host
+- name: ui5-wdio-repo-host
   type: org.cloudfoundry.managed-service
   parameters:
     service: html5-apps-repo
-    service-name: project1-html5-srv
+    service-name: ui5-wdio-html5-srv
     service-plan: app-host
 parameters:
   deploy_mode: html5-repo

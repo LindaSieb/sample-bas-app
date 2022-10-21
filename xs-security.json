@@ -1,5 +1,5 @@
 {
-  "xsappname": "project1",
+  "xsappname": "ui5-wdio",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [],

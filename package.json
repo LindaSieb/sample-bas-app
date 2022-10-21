@@ -1,5 +1,5 @@
 {
-    "name": "project1",
+    "name": "ui5-wdio",
     "version": "0.0.1",
     "private": true,
     "description": "A Fiori application.",
@@ -24,8 +24,8 @@
         "wdio-ui5-service": "^0.9.13"
     },
     "scripts": {
-        "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#project1-display\"",
-        "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#project1-display\"",
+        "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ui5-wdio-display\"",
+        "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ui5-wdio-display\"",
         "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
         "deploy": "fiori cfDeploy",
         "deploy-config": "fiori add deploy-config",
@@ -35,7 +35,7 @@
         "int-tests": "fiori run --open 'test/integration/opaTests.qunit.html'",
         "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
         "build:mta": "rimraf resources mta_archives && mbt build",
-        "undeploy": "cf undeploy project1 --delete-services --delete-service-keys --delete-service-brokers",
+        "undeploy": "cf undeploy ui5-wdio --delete-services --delete-service-keys --delete-service-brokers",
         "wdio": "wdio run wdio.conf.js"
     },
     "ui5": {

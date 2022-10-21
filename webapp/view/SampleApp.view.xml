@@ -1,4 +1,4 @@
-<mvc:View controllerName="project1.controller.SampleApp"
+<mvc:View controllerName="ui5-wdio.controller.SampleApp"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">

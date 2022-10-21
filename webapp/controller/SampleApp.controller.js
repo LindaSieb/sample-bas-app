@@ -7,7 +7,7 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("project1.controller.SampleApp", {
+        return Controller.extend("ui5-wdio.controller.SampleApp", {
             onInit: function () {
 
             }

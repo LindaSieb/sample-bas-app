@@ -1,5 +1,5 @@
 sap.ui.define([
-	"project1/test/unit/controller/SampleApp.controller"
+	"ui5-wdio/test/unit/controller/SampleApp.controller"
 ], function () {
 	"use strict";
 });
