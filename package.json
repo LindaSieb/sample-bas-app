@@ -9,6 +9,9 @@
         "sapui5"
     ],
     "main": "webapp/index.html",
+    "dependencies": {
+        "@sap/approuter": "^11.0.x"
+    },
     "devDependencies": {
         "@sap/ui5-builder-webide-extension": "^1.1.8",
         "@sap/ux-ui5-tooling": "1",
@@ -21,7 +24,8 @@
         "mbt": "^1.2.18",
         "ui5-task-zipper": "^0.5.0",
         "wdio-chromedriver-service": "^8.0.0",
-        "wdio-ui5-service": "^0.9.13"
+        "wdio-ui5-service": "^0.9.13",
+        "start": "node node_modules/@sap/approuter/approuter.js"
     },
     "scripts": {
         "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ui5-wdio-display\"",

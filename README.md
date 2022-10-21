@@ -33,6 +33,9 @@ Set up the demo
   paste it into Base URL. There are no credentials required to access the app, so you can
   choose <none> for credentials. Keep the npm Script as default (wdio).
   <br>![](/readme_images/wdio_setup.png)
-- Run your pipeline again. 
-- While you wait, you can set up a webhook with your repository following the documentation [here](https://developers.sap.com/tutorials/btp-app-ci-cd-btp.html) (just the Create a Webhook part) 
-- Your pipeline should fail in the Acceptance stage, because the wdio test is checking for the wrong title (you can see it in the logs if you click on the stage, but it's not so beautiful for a demo)
+- Run your pipeline again.
+- While you wait, you can set up a webhook with your repository following the
+  documentation [here](https://developers.sap.com/tutorials/btp-app-ci-cd-btp.html) (just the Create
+  a Webhook part)
+- Your pipeline should fail in the Acceptance stage, because the wdio test is checking for the wrong
+  title (you can see it in the logs if you click on the stage, but it's not so beautiful for a demo)
