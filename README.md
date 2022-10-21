@@ -25,4 +25,14 @@ Set up the demo
 - Once you have this information, you can do a first run of the pipeline by clicking “Create” at the
   bottom and then clicking “Run” at the top.
 - After the run is successful, you should be able to see the application in the HTML5 applications
-  section of your space
+  section of your subaccount. Click on the app name.
+  <br>![](/readme_images/see_app.png)
+- Copy everything in the url before the / after .com
+  <br>![](/readme_images/copy_url.png)
+- That is your base URL. You can edit your pipeline job again and turn on WebdriverIO test, and then
+  paste it into Base URL. There are no credentials required to access the app, so you can
+  choose <none> for credentials. Keep the npm Script as default (wdio).
+  <br>![](/readme_images/wdio_setup.png)
+- Run your pipeline again. 
+- While you wait, you can set up a webhook with your repository following the documentation [here](https://developers.sap.com/tutorials/btp-app-ci-cd-btp.html) (just the Create a Webhook part) 
+- Your pipeline should fail in the Acceptance stage, because the wdio test is checking for the wrong title (you can see it in the logs if you click on the stage, but it's not so beautiful for a demo)
